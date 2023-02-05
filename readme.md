@@ -19,7 +19,7 @@ On top of that, this project includes:
 - [Sass](https://sass-lang.com) (SCSS syntax) as the style language
 - [Stylelint](https://stylelint.io) style linter
 - reasonable [Browserslist](https://browsersl.ist) configuration
-- [react-snap](https://github.com/stereobooster/react-snap) for prerendering
+- basic prerendering
 
 Made by [Ray](https://rayinaway.github.io).
 
