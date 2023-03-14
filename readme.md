@@ -33,7 +33,9 @@ Changes are listed in the [changelog](./changelog.md). The repository is hosted 
 
 2. Replace `__PLACEHOLDER__` values in _`package.json`_ and _`package-lock.json`_ with your own meaningful ones.
 
-3. Optionally, run the following command to update the package dependencies:
+3. Clone _`.env.development.local.example`_ as _`.env.development.local`_ and edit the values in the file if necessary.
+
+4. Optionally, run the following command to update the package dependencies:
 
    ```shell
    npx npm-check-updates --upgrade && npm install
@@ -41,7 +43,7 @@ Changes are listed in the [changelog](./changelog.md). The repository is hosted 
 
    **Beware of major version bumps!** It is strongly recommended to review those updates manually to ensure that breaking changes do not actually break anything in your project.
 
-4. Don't forget to either remove or write your own _`readme.md`_, _`license.md`_, and _`changelog.md`_ to prevent anyone from confusing your project with this starter.
+5. Don't forget to either remove or write your own _`readme.md`_, _`license.md`_, and _`changelog.md`_ to prevent anyone from confusing your project with this starter.
 
 _Since there's no hidden configuration or high-level encapsulating tools, you're free (and encouraged!) to tailor the project further however you see fit._
 
