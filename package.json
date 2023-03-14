@@ -50,7 +50,7 @@
 		"typescript": "^4.9.4"
 	},
 	"scripts": {
-		"build": "npm run typecheck && node ./scripts/prebuild.js && parcel build --public-url \".\" --no-source-maps --dist-dir \"./build\" && node ./scripts/postbuild.js",
+		"build": "npm run typecheck && node ./scripts/prebuild.js && parcel build --public-url \".\" --no-source-maps && node ./scripts/postbuild.js",
 		"develop": "node ./scripts/prebuild.js && parcel serve --target default --no-autoinstall --lazy --dist-dir \"./build\" --https",
 		"lint": "npm-run-all \"lint:*\" --parallel --continue-on-error --aggregate-output",
 		"lint:scss": "stylelint \"./src/**/*.scss\"",
