@@ -1,14 +1,14 @@
-const fs = require('fs');
-const path = require('path');
+const Fs = require('fs');
+const Path = require('path');
 
 const RELATIVE_BUILD_DIR_PATH = '../build';
 
 clearBuildArtifacts();
 
 function clearBuildArtifacts() {
-	const buildDirPath = path.resolve(__dirname, RELATIVE_BUILD_DIR_PATH);
+	const buildDirPath = Path.resolve(__dirname, RELATIVE_BUILD_DIR_PATH);
 
-	fs.rmSync(buildDirPath, {
+	Fs.rmSync(buildDirPath, {
 		force: true,
 		recursive: true
 	});
