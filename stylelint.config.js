@@ -6,6 +6,7 @@ module.exports = {
 		'stylelint-prettier'
 	],
 	rules: {
+		'color-no-hex': true,
 		'declaration-empty-line-before': null,
 		'font-family-name-quotes': 'always-unless-keyword',
 		'font-family-no-missing-generic-family-keyword': null,
