@@ -7,6 +7,8 @@ const server = requireWithoutStyleModules('../build/server/server.js');
 const RELATIVE_APP_DOCUMENT_FILE_PATH = '../build/index.html';
 const RELATIVE_SERVER_BUILD_DIR_PATH = '../build/server';
 
+const APP_ELEMENT_ID = 'app';
+
 prerenderApp();
 
 function prerenderApp() {
@@ -22,8 +24,9 @@ function prerenderApp() {
 
 	let stringifiedAppDocument = Fs.readFileSync(appDocumentFilePath);
 
-	const appElementApproximatePosition =
-		stringifiedAppDocument.indexOf('id="app"');
+	const appElementApproximatePosition = stringifiedAppDocument.indexOf(
+		`id="${APP_ELEMENT_ID}"`
+	);
 	const appElementContentMountPosition = stringifiedAppDocument.indexOf(
 		'</',
 		appElementApproximatePosition

@@ -6,6 +6,8 @@ import Root from '~/src/layout/components/root';
 
 import services from './services';
 
+const APP_ELEMENT_ID = 'app';
+
 export const rootRender = (
 	<React.StrictMode>
 		<Root services={services} />
@@ -17,7 +19,7 @@ if (typeof window !== 'undefined') {
 }
 
 function renderApp(): void {
-	const appElement = document.querySelector('#app');
+	const appElement = document.querySelector(`#${APP_ELEMENT_ID}`);
 
 	if (appElement == null) {
 		return;
