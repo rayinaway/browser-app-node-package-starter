@@ -19,11 +19,13 @@ if (typeof window !== 'undefined') {
 function renderApp(): void {
 	const appElement = document.querySelector('#app');
 
-	if (appElement != null) {
-		if (appElement.childNodes.length > 0) {
-			ReactDomClient.hydrateRoot(appElement, rootRender);
-		} else {
-			ReactDomClient.createRoot(appElement).render(rootRender);
-		}
+	if (appElement == null) {
+		return;
+	}
+
+	if (appElement.childNodes.length > 0) {
+		ReactDomClient.hydrateRoot(appElement, rootRender);
+	} else {
+		ReactDomClient.createRoot(appElement).render(rootRender);
 	}
 }
