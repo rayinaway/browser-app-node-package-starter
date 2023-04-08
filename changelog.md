@@ -1,5 +1,19 @@
 # Changelog
 
+## [v1.1.2](https://github.com/rayinaway/browser-app-node-package-starter/compare/v1.1.1...v1.1.2)
+
+### Other
+
+- Additional constants set.
+- Unnecessary styling removed.
+- `build` package script tweaked.
+- TypeScript configuration tweaked.
+- Stylelint configuration tweaked.
+- Conditional nesting improved.
+- Several naming issues fixed.
+- @total-typescript/ts-reset moved to dependencies.
+- Package dependencies updated.
+
 ## [v1.1.1](https://github.com/rayinaway/browser-app-node-package-starter/compare/v1.1.0...v1.1.1)
 
 ### Other
