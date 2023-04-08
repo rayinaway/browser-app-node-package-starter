@@ -1,6 +1,6 @@
-const fs = require('fs');
+const Fs = require('fs');
 const Module = require('module');
-const path = require('path');
+const Path = require('path');
 
 const server = requireWithoutStyleModules('../build/server/server.js');
 
@@ -10,17 +10,17 @@ const RELATIVE_SERVER_BUILD_DIR_PATH = '../build/server';
 prerenderApp();
 
 function prerenderApp() {
-	const appDocumentFilePath = path.resolve(
+	const appDocumentFilePath = Path.resolve(
 		__dirname,
 		RELATIVE_APP_DOCUMENT_FILE_PATH
 	);
 
-	const serverBuildDirPath = path.resolve(
+	const serverBuildDirPath = Path.resolve(
 		__dirname,
 		RELATIVE_SERVER_BUILD_DIR_PATH
 	);
 
-	let stringifiedAppDocument = fs.readFileSync(appDocumentFilePath);
+	let stringifiedAppDocument = Fs.readFileSync(appDocumentFilePath);
 
 	const appElementApproximatePosition =
 		stringifiedAppDocument.indexOf('id="app"');
@@ -36,9 +36,9 @@ function prerenderApp() {
 		stringifiedAppRender +
 		stringifiedAppDocument.slice(appElementContentMountPosition);
 
-	fs.writeFileSync(appDocumentFilePath, stringifiedAppDocument);
+	Fs.writeFileSync(appDocumentFilePath, stringifiedAppDocument);
 
-	fs.rmSync(serverBuildDirPath, {
+	Fs.rmSync(serverBuildDirPath, {
 		force: true,
 		recursive: true
 	});
