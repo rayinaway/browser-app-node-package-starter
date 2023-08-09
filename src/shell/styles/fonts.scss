@@ -6,10 +6,10 @@
 	@each $weight, $styles in $font-weight-styles {
 		@each $style in $styles {
 			@font-face {
-				font-weight: $font-weight;
+				font-weight: $weight;
 				font-family: $font-family-name;
-				font-style: $font-style;
-				src: url('#{$font-file-path-base}-#{$font-weight}-#{$font-style}.woff2')
+				font-style: $style;
+				src: url('#{$font-file-path-base}-#{$weight}-#{$style}.woff2')
 					format('woff2');
 			}
 		}
