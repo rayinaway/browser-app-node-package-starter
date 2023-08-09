@@ -47,16 +47,16 @@ function prerenderApp() {
 	});
 }
 
-function requireWithoutStyleModules(moduleName) {
+function requireWithoutStyleModules(moduleNameOrPath) {
 	const requireOriginal = Module.prototype.require;
 
-	Module.prototype.require = function (moduleName) {
-		if (!moduleName.endsWith('.css')) {
-			return requireOriginal.call(this, moduleName);
+	Module.prototype.require = function (moduleNameOrPath) {
+		if (!moduleNameOrPath.endsWith('.css')) {
+			return requireOriginal.call(this, moduleNameOrPath);
 		}
 	};
 
-	const importedModule = require(moduleName);
+	const importedModule = require(moduleNameOrPath);
 
 	Module.prototype.require = requireOriginal;
 
