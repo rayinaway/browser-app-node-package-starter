@@ -2,7 +2,7 @@ import {cnx} from './markup';
 
 describe('cnx shell util', () => {
 	test('ignores non-string arguments', () => {
-		const cnxCallResult = cnx(
+		const className = cnx(
 			undefined,
 			'string1',
 			null,
@@ -14,18 +14,18 @@ describe('cnx shell util', () => {
 			{}
 		);
 
-		expect(cnxCallResult).toBe('string1 string2 string3');
+		expect(className).toBe('string1 string2 string3');
 	});
 
 	test('returns a space-separated concatenation of the passed strings', () => {
-		const cnxCallResult = cnx('string1', 'string2', 'string3');
+		const className = cnx('string1', 'string2', 'string3');
 
-		expect(cnxCallResult).toBe('string1 string2 string3');
+		expect(className).toBe('string1 string2 string3');
 	});
 
 	test('returns undefined if no strings were passed', () => {
-		const cnxCallResult = cnx();
+		const className = cnx();
 
-		expect(cnxCallResult).toBe(undefined);
+		expect(className).toBe(undefined);
 	});
 });
