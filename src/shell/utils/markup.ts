@@ -1,16 +1,10 @@
-export function cnx(...classNameSegments: Array<unknown>): string | undefined {
-	const className = classNameSegments.reduce<string>(
-		(incompleteClassName, segment) => {
-			if (typeof segment !== 'string') {
-				return incompleteClassName;
-			}
-
-			return incompleteClassName.length > 0
-				? `${incompleteClassName} ${segment}`
-				: segment;
-		},
-		''
-	);
+export function cnx(...classes: Array<unknown>): string | undefined {
+	let className = '';
+	classes.forEach((cl) => {
+		if (typeof cl === 'string') {
+			className = className.length > 0 ? `${className} ${cl}` : cl;
+		}
+	});
 
 	return className.length > 0 ? className : undefined;
 }
