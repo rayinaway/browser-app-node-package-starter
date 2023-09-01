@@ -1,5 +1,18 @@
 # Changelog
 
+## [v1.1.3](https://github.com/rayinaway/browser-app-node-package-starter/compare/v1.1.2...v1.1.3)
+
+### Fixes
+
+- Not working shell font declaration fixed.
+
+### Other
+
+- `cnx` shell util simplified.
+- Naming improved.
+- pretty-quick replaced with lint-staged.
+- Package dependencies updated.
+
 ## [v1.1.2](https://github.com/rayinaway/browser-app-node-package-starter/compare/v1.1.1...v1.1.2)
 
 ### Other
