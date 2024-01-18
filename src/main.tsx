@@ -22,7 +22,7 @@ function renderApp(): void {
 	const appElement = document.querySelector(`#${APP_ELEMENT_ID}`);
 
 	if (appElement == null) {
-		return;
+		throw new Error('The app cannot be rendered: the app element is missing.');
 	}
 
 	if (appElement.childNodes.length > 0) {
