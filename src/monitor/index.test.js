@@ -9,9 +9,9 @@ describe('Monitor service', () => {
 
 		const monitor = new Monitor();
 
-		const eventPayload = new Object();
+		const object = new Object();
 
-		monitor.reportEvent(eventPayload);
+		monitor.reportEvent(object);
 
 		expect(consoleErrorMock).not.toHaveBeenCalled();
 		expect(consoleInfoMock).not.toHaveBeenCalled();
@@ -24,10 +24,10 @@ describe('Monitor service', () => {
 
 		const monitor = new Monitor();
 
-		const eventPayload = new Error();
+		const error = new Error();
 
-		monitor.reportEvent(eventPayload);
+		monitor.reportEvent(error);
 
-		expect(consoleErrorMock).toHaveBeenCalledOnceWith(eventPayload);
+		expect(consoleErrorMock).toHaveBeenCalledOnceWith(payload);
 	});
 });
