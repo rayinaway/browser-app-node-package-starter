@@ -7,6 +7,6 @@ import * as cn from './root-base.module.scss';
 export default function RootBase({
 	className,
 	...props
-}: React.HTMLAttributes<HTMLDivElement>): React.ReactElement {
+}: React.ComponentPropsWithoutRef<'div'>): React.ReactElement {
 	return <div className={cnx(cn.rootBase, className)} {...props} />;
 }
