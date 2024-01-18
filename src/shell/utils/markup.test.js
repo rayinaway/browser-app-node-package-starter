@@ -1,7 +1,7 @@
 import {cnx} from './markup';
 
 describe('cnx shell util', () => {
-	test('ignores non-string arguments', () => {
+	test('ignores nonstring and empty string arguments', () => {
 		const className = cnx(
 			undefined,
 			'string1',
@@ -10,6 +10,7 @@ describe('cnx shell util', () => {
 			true,
 			'string3',
 			1,
+			'',
 			[],
 			{}
 		);
