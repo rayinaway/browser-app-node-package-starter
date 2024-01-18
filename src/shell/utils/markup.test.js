@@ -18,15 +18,15 @@ describe('cnx shell util', () => {
 		expect(className).toBe('string1 string2 string3');
 	});
 
-	test('returns null if no nonempty strings were passed', () => {
-		const className = cnx();
-
-		expect(className).toBe(null);
-	});
-
 	test('returns the space-separated concatenation of the passed strings', () => {
 		const className = cnx('string1', 'string2', 'string3');
 
 		expect(className).toBe('string1 string2 string3');
+	});
+
+	test('returns undefined if no nonempty strings were passed', () => {
+		const className = cnx();
+
+		expect(className).toBe(undefined);
 	});
 });
