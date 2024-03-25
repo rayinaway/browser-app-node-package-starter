@@ -10,8 +10,8 @@
     "moduleResolution": "bundler",
 		"isolatedModules": true,
 		"resolveJsonModule": true,
-		"baseUrl": ".",
 		"paths": {
+			"@/*": ["./src/*"],
 			"~/*": ["./*"]
 		},
     "noEmit": true
