@@ -1,9 +1,16 @@
 import ServiceBase from '~/src/service-base';
 
+type EventPayloads = {
+	'error': Error;
+};
+
 export default class Monitor extends ServiceBase {
-	reportEvent(payload: unknown): void {
-		if (payload instanceof Error) {
-			console.error(payload);
+	recordEvent<EventType extends keyof EventPayloads>(
+		eventType: EventType,
+		eventPayload: EventPayloads[EventType]
+	): void {
+		if (eventType === 'error') {
+			console.error(eventPayload);
 		}
 	}
 }
