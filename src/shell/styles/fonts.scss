@@ -1,6 +1,6 @@
 @mixin font-faces(
 	$font-family-name,
-	$font-weight-styles,
+	$font-weights-styles,
 	$font-file-path-base
 ) {
 	@each $weight, $styles in $font-weight-styles {
