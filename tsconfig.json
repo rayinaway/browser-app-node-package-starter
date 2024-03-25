@@ -2,16 +2,18 @@
 	"include": ["./src/**/*.ts", "./src/**/*.tsx"],
 	"compilerOptions": {
 		"strict": true,
+    "noUncheckedIndexedAccess": true,
 		"jsx": "preserve",
 		"target": "esnext",
+		"lib": ["esnext", "dom", "dom.iterable"],
 		"module": "esnext",
-		"moduleResolution": "node",
+    "moduleResolution": "bundler",
 		"isolatedModules": true,
-		"allowSyntheticDefaultImports": true,
 		"resolveJsonModule": true,
 		"baseUrl": ".",
 		"paths": {
 			"~/*": ["./*"]
-		}
+		},
+    "noEmit": true
 	}
 }
