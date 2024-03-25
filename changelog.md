@@ -40,7 +40,7 @@
 - React strict mode enabled.
 - Services in `ServiceCollection` are no longer optional.
 - react-snap prerendering replaced with a simpler custom implementation.
-- TypeScript reset added.
+- [TypeScript reset](https://www.npmjs.com/package/@total-typescript/ts-reset) added.
 - SCSS module mocking implemented.
 - Asset mocking implemented.
 
