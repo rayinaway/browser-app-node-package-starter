@@ -2,7 +2,7 @@ const Fs = require('fs');
 const Module = require('module');
 const Path = require('path');
 
-const server = requireWithoutStyleModules('../build/server/server');
+const Server = requireWithoutStyleModules('../build/server/server');
 
 const RELATIVE_APP_DOCUMENT_FILE_PATH = '../build/index.html';
 const RELATIVE_SERVER_BUILD_DIR_PATH = '../build/server';
@@ -27,7 +27,7 @@ function prerenderApp() {
 		approximateAppElementPosition
 	);
 
-	const stringifiedAppRender = server.renderStringifiedApp();
+	const stringifiedAppRender = Server.renderStringifiedApp();
 
 	stringifiedAppDocument =
 		stringifiedAppDocument.slice(0, appContentMountPosition) +
