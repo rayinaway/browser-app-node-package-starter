@@ -8,6 +8,7 @@ import * as cn from './root.module.scss';
 
 interface PropCollection {
 	services: ServiceCollection;
+	forcedRoute?: string;
 }
 
 export default React.memo(Root);

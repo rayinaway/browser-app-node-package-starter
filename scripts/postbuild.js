@@ -4,20 +4,25 @@ const Path = require('path');
 
 const Server = requireWithoutStyleModules('../build/server/server');
 
-const RELATIVE_APP_DOCUMENT_FILE_PATH = '../build/index.html';
+const RELATIVE_BUILD_DIR_PATH = '../build';
 const RELATIVE_SERVER_BUILD_DIR_PATH = '../build/server';
 
+const APP_DOCUMENT_BUILD_FILE_NAME = 'index.html';
+
 const APP_ELEMENT_ID = 'app';
+
+const STATIC_APP_ROUTES = ['/'];
 
 prerenderApp();
 
 function prerenderApp() {
 	const appDocumentFilePath = Path.resolve(
 		__dirname,
-		RELATIVE_APP_DOCUMENT_FILE_PATH
+		RELATIVE_BUILD_DIR_PATH,
+		APP_DOCUMENT_BUILD_FILE_NAME
 	);
 
-	let stringifiedAppDocument = Fs.readFileSync(appDocumentFilePath);
+	const stringifiedAppDocument = Fs.readFileSync(appDocumentFilePath);
 
 	const approximateAppElementPosition = stringifiedAppDocument.indexOf(
 		`id="${APP_ELEMENT_ID}"`
@@ -27,14 +32,39 @@ function prerenderApp() {
 		approximateAppElementPosition
 	);
 
-	const stringifiedAppRender = Server.renderStringifiedApp();
+	STATIC_APP_ROUTES.forEach((route) => {
+		const routeDestinationPosition = route.lastIndexOf('/');
 
-	stringifiedAppDocument =
-		stringifiedAppDocument.slice(0, appContentMountPosition) +
-		stringifiedAppRender +
-		stringifiedAppDocument.slice(appContentMountPosition);
+		const routeTrail =
+			routeDestinationPosition > 1
+				? route.slice(1, routeDestinationPosition)
+				: '';
 
-	Fs.writeFileSync(appDocumentFilePath, stringifiedAppDocument);
+		if (routeTrail.length > 0) {
+			Fs.mkdirSync(routeTrail, {
+				recursive: true
+			});
+		}
+
+		const routedAppDocumentFileName =
+			routeDestinationPosition !== route.length - 1
+				? `${route.slice(routeDestinationPosition + 1)}.html`
+				: 'index.html';
+		const routedAppDocumentFilePath = Path.resolve(
+			__dirname,
+			RELATIVE_BUILD_DIR_PATH,
+			routeTrail,
+			routedAppDocumentFileName
+		);
+
+		const stringifiedAppRender = Server.renderStringifiedApp(route);
+		const stringifiedRenderedAppDocument =
+			stringifiedAppDocument.slice(0, appContentMountPosition) +
+			stringifiedAppRender +
+			stringifiedAppDocument.slice(appContentMountPosition);
+
+		Fs.writeFileSync(routedAppDocumentFilePath, stringifiedRenderedAppDocument);
+	});
 
 	const serverBuildDirPath = Path.resolve(
 		__dirname,

@@ -8,14 +8,16 @@ import services from './services';
 
 const APP_ELEMENT_ID = 'app';
 
-export const rootRender = (
-	<React.StrictMode>
-		<Root services={services} />
-	</React.StrictMode>
-);
-
 if (typeof window !== 'undefined') {
 	renderApp();
+}
+
+export function getRootRender(forcedRoute?: string): React.ReactElement {
+	return (
+		<React.StrictMode>
+			<Root services={services} forcedRoute={forcedRoute} />
+		</React.StrictMode>
+	);
 }
 
 function renderApp(): void {
@@ -24,6 +26,8 @@ function renderApp(): void {
 	if (appElement == null) {
 		throw new Error('The app cannot be rendered: the app element is missing.');
 	}
+
+	const rootRender = getRootRender();
 
 	if (appElement.childNodes.length > 0) {
 		ReactDomClient.hydrateRoot(appElement, rootRender);
