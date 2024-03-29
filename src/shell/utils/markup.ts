@@ -1,9 +1,5 @@
-export function cnx(...args: Array<unknown>): string | undefined {
-	const nonEmptyStringArgs = args.filter(
-		(arg) => typeof arg === 'string' && arg.length > 0
-	);
+export function cnx(...classes: Array<string | undefined>): string | undefined {
+	const nonEmptyClasses = classes.filter((cl) => cl != null && cl.length > 0);
 
-	return nonEmptyStringArgs.length > 0
-		? nonEmptyStringArgs.join(' ')
-		: undefined;
+	return nonEmptyClasses.length > 0 ? nonEmptyClasses.join(' ') : undefined;
 }

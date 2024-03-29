@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import {cnx} from '~/src/shell/utils/markup';
 
-import * as cn from './root-base.module.scss';
+import * as cn from './root-base.css';
 
 export default function RootBase({
 	className,

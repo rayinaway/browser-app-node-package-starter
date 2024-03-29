@@ -16,8 +16,7 @@ On top of that, this project includes:
 - ready-to-use, batteries-included [React](https://reactjs.org) installation
   - React-related ESLint configuration additions
   - UI testing utilities from [Testing Library](https://testing-library.com)
-- [Sass](https://sass-lang.com) (SCSS syntax) as the style language
-- [Stylelint](https://stylelint.io) style linter
+- [vanilla-extract](https://vanilla-extract.style) for preprocessing styles
 - reasonable [Browserslist](https://browsersl.ist) configuration
 - basic prerendering
 
@@ -63,9 +62,7 @@ _Since there's no hidden configuration or high-level encapsulating tools, you're
 
 - `build` typechecks using `typecheck` and, if successful, builds the package.
 - `develop` builds the package continuously and serves it on the specified port.
-- `lint` runs every `lint:*` script.
-  - `lint:scss` lints Sass files in _`src`_.
-  - `lint:ts` lints TypeScript files in _`src`_.
+- `lint` lints TypeScript files in _`src`_.
 - `postinstall`, `postpublish`, and `prepublishOnly` are service scripts for husky to install correctly. Not to be altered.
 - `test` runs tests and generates a test coverage report.
 - `test-watch` runs tests continuously to test changes being made to files.

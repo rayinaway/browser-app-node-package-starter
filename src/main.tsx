@@ -4,6 +4,7 @@ import * as ReactDomClient from 'react-dom/client';
 
 import Root from '~/src/layout/components/root';
 
+import './base.css';
 import services from './services';
 
 const APP_ELEMENT_ID = 'app';
