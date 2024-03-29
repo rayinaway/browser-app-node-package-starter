@@ -17,6 +17,8 @@ globalStyle(
 	].join(', '),
 	{
 		overflowWrap: 'break-word',
-		boxSizing: 'border-box'
+		boxSizing: 'border-box',
+		minWidth: 0,
+		minHeight: 0
 	}
 );
