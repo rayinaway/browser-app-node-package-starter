@@ -30,6 +30,7 @@ module.exports = {
 	},
 	rules: {
 		'@typescript-eslint/explicit-function-return-type': 'error',
+		'@typescript-eslint/method-signature-style': 'error',
 		'@typescript-eslint/no-namespace': 'off',
 		'@typescript-eslint/no-unsafe-member-access': 'off',
 		'@typescript-eslint/no-use-before-define': 'off',
