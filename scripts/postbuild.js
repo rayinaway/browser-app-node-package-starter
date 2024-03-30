@@ -21,7 +21,6 @@ function prerenderApp() {
 		RELATIVE_BUILD_DIR_PATH,
 		APP_DOCUMENT_BUILD_FILE_NAME
 	);
-
 	const stringifiedAppDocument = Fs.readFileSync(appDocumentFilePath);
 
 	const approximateAppElementPosition = stringifiedAppDocument.indexOf(
