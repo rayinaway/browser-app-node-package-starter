@@ -40,7 +40,13 @@ function prerenderApp() {
 				: '';
 
 		if (routeTrail.length > 0) {
-			Fs.mkdirSync(routeTrail, {
+			const routedAppDocumentDirPath = Path.resolve(
+				__dirname,
+				RELATIVE_BUILD_DIR_PATH,
+				routeTrail
+			);
+
+			Fs.mkdirSync(routedAppDocumentDirPath, {
 				recursive: true
 			});
 		}
