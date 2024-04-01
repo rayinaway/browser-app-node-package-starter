@@ -7,7 +7,7 @@ const Server = requireWithoutStyleModules('../build/server/server');
 const RELATIVE_BUILD_DIR_PATH = '../build';
 const RELATIVE_SERVER_BUILD_DIR_PATH = '../build/server';
 
-const APP_DOCUMENT_BUILD_FILE_NAME = 'index.html';
+const APP_DOCUMENT_FILE_NAME = 'index.html';
 
 const APP_ELEMENT_ID = 'app';
 
@@ -19,7 +19,7 @@ function prerenderApp() {
 	const appDocumentFilePath = Path.resolve(
 		__dirname,
 		RELATIVE_BUILD_DIR_PATH,
-		APP_DOCUMENT_BUILD_FILE_NAME
+		APP_DOCUMENT_FILE_NAME
 	);
 	const stringifiedAppDocument = Fs.readFileSync(appDocumentFilePath);
 
