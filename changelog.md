@@ -10,7 +10,7 @@
 
 - `cnx` shell util simplified.
 - Naming improved.
-- pretty-quick replaced with lint-staged.
+- pretty-quick replaced with [lint-staged](https://github.com/lint-staged/lint-staged).
 - Package dependencies updated.
 
 ## [v1.1.2](https://github.com/rayinaway/browser-app-node-package-starter/compare/v1.1.1...v1.1.2)
