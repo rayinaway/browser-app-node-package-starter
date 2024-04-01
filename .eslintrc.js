@@ -18,7 +18,7 @@ module.exports = {
 		project: './tsconfig.json'
 	},
 	settings: {
-		'import/internal-regex': `^~/`,
+		'import/internal-regex': `^{@,~}/`,
 		'react': {
 			version: 'detect'
 		}

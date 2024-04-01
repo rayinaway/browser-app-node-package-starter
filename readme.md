@@ -49,7 +49,7 @@ _Since there's no hidden configuration or high-level encapsulating tools, you're
 ## Project structure
 
 - Package source files belong in the _`src`_ directory.
-  - For convenience, Parcel includes the _`~`_ path alias that points to the directory where _`package.json`_ is located. For example, to import _`src/module.ts`_ from anywhere in the project you can use the _`~/src/module.ts`_ path.
+  - For convenience, Parcel includes the _`~`_ path alias that points to the directory where _`package.json`_ is located. For example, to import _`src/module.ts`_ from anywhere in the project you can use the _`~/src/module.ts`_ path. Similarly, _`@`_ points to _`~/src`_.
   - Generally, any self-contained functionality should be implemented as a service in its own subdirectory and registered in _`src/services.ts`_ to be available through the dependency injection. The project includes the Monitor service as an example of this approach.
   - _`src/layout`_ and _`src/shell`_ are exceptions to the service-based structure. The _`src/layout`_ directory contains files needed for the app's UI to work as a whole. The _`src/shell`_ directory contains building blocks for that UI; think of it as a built-in component library. Modules in _`src/layout`_ can import modules from _`src/shell`_, but not vice versa.
   - Test files should have the _`.test.js`_ extension to be detected by Jest.

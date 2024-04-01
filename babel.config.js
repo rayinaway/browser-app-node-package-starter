@@ -8,6 +8,7 @@ module.exports = (api) => {
 				'babel-plugin-module-resolver',
 				{
 					alias: {
+						'^@/(.*)$': './src/\\1',
 						'^~/(.*)$': './\\1'
 					}
 				}
