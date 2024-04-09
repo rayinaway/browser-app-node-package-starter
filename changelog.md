@@ -37,12 +37,12 @@
 
 ### Features
 
-- React strict mode enabled.
+- Strict mode enabled for React.
 - Services in `ServiceCollection` are no longer optional.
 - react-snap prerendering replaced with a simpler custom implementation.
 - [TypeScript reset](https://www.npmjs.com/package/@total-typescript/ts-reset) added.
 - SCSS module mocking implemented.
-- Asset mocking implemented.
+- Asset module mocking implemented.
 
 ### Fixes
 
@@ -56,7 +56,7 @@
 - ESLint configuration tweaked:
   - TypeScript namespaces no longer prohibited.
 - Jest configuration tweaked.
-- SCSS module declaration file renamed.
+- SCSS module type declaration file renamed.
 - Package dependencies updated.
 
 ## [v1.0.1](https://github.com/rayinaway/browser-app-node-package-starter/compare/v1.0.0...v1.0.1)
