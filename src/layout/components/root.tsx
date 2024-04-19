@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import {ServicesProvider} from '~/src/layout/hooks/services';
-import {ServiceCollection} from '~/src/services';
-import RootBase from '~/src/shell/components/root-base';
+import {ServicesProvider} from '@/layout/hooks/services';
+import {ServiceCollection} from '@/services';
+import RootBase from '@/shell/components/root-base';
 
 import * as cn from './root.css';
 

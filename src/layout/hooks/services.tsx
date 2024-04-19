@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {ServiceCollection} from '~/src/services';
+import {ServiceCollection} from '@/services';
 
 type ServicesContextValue = ServiceCollection | null;
 

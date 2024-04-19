@@ -1,4 +1,4 @@
-import Monitor from '~/src/monitor';
+import Monitor from '@/monitor';
 
 export interface ServiceCollection {
 	monitor: Monitor;

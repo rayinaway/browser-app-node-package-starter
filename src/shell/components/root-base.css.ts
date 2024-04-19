@@ -1,6 +1,6 @@
 import {globalStyle, style} from '@vanilla-extract/css';
 
-import '~/src/shell/styles/fonts.css';
+import '@/shell/styles/fonts.css';
 
 export const rootBase = style({
 	overflow: 'hidden'
