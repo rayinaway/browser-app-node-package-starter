@@ -1,5 +1,4 @@
 {
-	"include": ["./src/**/*.ts", "./src/**/*.tsx"],
 	"compilerOptions": {
 		"strict": true,
 		"noUncheckedIndexedAccess": true,
@@ -14,5 +13,6 @@
 			"@/*": ["./src/*"],
 			"~/*": ["./*"]
 		}
-	}
+	},
+	"include": ["./src/**/*"]
 }
