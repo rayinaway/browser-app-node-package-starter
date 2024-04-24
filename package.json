@@ -47,7 +47,7 @@
 	"scripts": {
 		"build": "npm run typecheck && node ./scripts/prebuild.js && parcel build --no-autoinstall --public-url \".\" --no-source-maps && node ./scripts/postbuild.js",
 		"develop": "node ./scripts/prebuild.js && parcel serve --target default --no-autoinstall --lazy --dist-dir \"./build\" --https",
-		"lint": "eslint \"./src/**/*.{ts,tsx}\"",
+		"lint": "eslint .",
 		"postinstall": "is-ci || husky",
 		"postpublish": "pinst --enable",
 		"prepublishOnly": "pinst --disable",

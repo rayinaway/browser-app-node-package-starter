@@ -15,6 +15,7 @@ module.exports = {
 	plugins: ['eslint-plugin-prettier', 'eslint-plugin-react-hooks'],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
+		tsconfigRootDir: __dirname,
 		project: './tsconfig.json'
 	},
 	settings: {
@@ -74,5 +75,6 @@ module.exports = {
 		'react-hooks/rules-of-hooks': 'error',
 		'react/prop-types': 'off',
 		'react/react-in-jsx-scope': 'off'
-	}
+	},
+	files: ['./src/**/*.ts', './src/**/*.tsx']
 };
