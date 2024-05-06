@@ -10,6 +10,6 @@ describe('Monitor service', () => {
 
 		monitor.recordEvent('error', error);
 
-		expect(consoleErrorMock).toHaveBeenCalledOnceWith(error);
+		expect(consoleErrorMock).toHaveBeenCalledExactlyOnceWith(error);
 	});
 });
