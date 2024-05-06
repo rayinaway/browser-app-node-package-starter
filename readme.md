@@ -4,19 +4,17 @@ A highly opinionated starter project for developing browser app Node.js packages
 
 - [TypeScript](https://www.typescriptlang.org) as the development language
   - [TS Reset](https://www.totaltypescript.com/ts-reset) for better builtin typing
-- [ESLint](https://eslint.org) linter
+- [Biome](https://biomejs.dev) linter and formatter
 - [Jest](https://jestjs.io) testing framework
 - [Parcel](https://parceljs.org) builder
 - [EditorConfig](https://editorconfig.org) for easier code editor configuration
-- [Prettier](https://prettier.io) for code formatting consistency
 - [commitlint](https://commitlint.js.org) for commit message consistency
-- [husky](https://typicode.github.io/husky) for enforcing the above consistencies on the Git level
+- [husky](https://typicode.github.io/husky) for enforcing project quality on the Git level
 
 On top of that, this project includes:
 
 - ready-to-use, batteries-included [React](https://reactjs.org) installation
   - basic prerendering
-  - React-related ESLint configuration additions
   - UI testing utilities from [Testing Library](https://testing-library.com)
 - [vanilla-extract](https://vanilla-extract.style) for preprocessing styles
 - reasonable [Browserslist](https://browsersl.ist) configuration
@@ -63,7 +61,7 @@ _Since there's no hidden configuration or high-level encapsulating tools, you're
 
 - `build` typechecks using `typecheck` and, if successful, builds the package.
 - `develop` builds the package continuously and serves it on the specified port.
-- `lint` lints TypeScript files in _`src`_.
+- `lint` lints TypeScript and JavaScript files.
 - `postinstall`, `postpublish`, and `prepublishOnly` are utility scripts for husky to install correctly. Not to be altered.
 - `test` runs tests and generates the test coverage report.
 - `test-watch` runs tests continuously to test changes being made to files.

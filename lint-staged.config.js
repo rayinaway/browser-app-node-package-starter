@@ -1,3 +1,3 @@
 module.exports = {
-	'*': 'prettier --ignore-unknown --write'
+	'*': 'biome format --files-ignore-unknown=true --no-errors-on-unmatched --write'
 };
