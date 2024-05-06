@@ -28,6 +28,10 @@
 				"noConsoleLog": "error",
 				"noEmptyBlockStatements": "error"
 			},
+			"complexity": {
+				"noForEach": "off",
+				"useLiteralKeys": "off"
+			},
 			"style": {
 				"noNamespace": "error",
 				"useBlockStatements": "error"
@@ -41,5 +45,22 @@
 			"bracketSpacing": false,
 			"trailingComma": "none"
 		}
-	}
+	},
+	"overrides": [
+		{
+			"include": ["./src/**/*.test.js", "./test/setup.js"],
+			"javascript": {
+				"globals": [
+					"afterAll",
+					"afterEach",
+					"beforeAll",
+					"beforeEach",
+					"describe",
+					"expect",
+					"jest",
+					"test"
+				]
+			}
+		}
+	]
 }
