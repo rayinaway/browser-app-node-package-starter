@@ -1,4 +1,4 @@
-import {ServiceCollection} from '@/services';
+import {ServiceCollection} from '~~/services';
 
 export default class ServiceBase {
 	protected readonly services: ServiceCollection;

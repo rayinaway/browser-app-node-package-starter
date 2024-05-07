@@ -1,4 +1,4 @@
-import ServiceBase from '@/service-base';
+import ServiceBase from '~~/service-base';
 
 type EventPayloads = {
 	'error': Error;

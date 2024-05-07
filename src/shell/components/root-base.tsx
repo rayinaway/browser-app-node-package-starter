@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {cnx} from '@/shell/utils/markup';
+import {cnx} from '~~/shell/utils/markup';
 
 import * as cn from './root-base.css';
 
