@@ -1,5 +1,4 @@
 import {globalStyle, style} from '@vanilla-extract/css';
-
 import '~~/shell/styles/fonts.css';
 
 export const rootBase = style({

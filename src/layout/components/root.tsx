@@ -1,9 +1,7 @@
 import * as React from 'react';
-
 import {ServicesProvider} from '~~/layout/hooks/services';
-import {ServiceCollection} from '~~/services';
+import type {ServiceCollection} from '~~/services';
 import RootBase from '~~/shell/components/root-base';
-
 import * as cn from './root.css';
 
 interface PropCollection {

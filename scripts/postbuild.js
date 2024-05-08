@@ -1,6 +1,6 @@
-const Fs = require('fs');
-const Module = require('module');
-const Path = require('path');
+const Fs = require('node:fs');
+const Module = require('node:module');
+const Path = require('node:path');
 
 const Server = requireWithoutStyleModules('../build/server/server');
 

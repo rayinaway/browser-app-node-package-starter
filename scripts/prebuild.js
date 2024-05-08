@@ -1,5 +1,5 @@
-const Fs = require('fs');
-const Path = require('path');
+const Fs = require('node:fs');
+const Path = require('node:path');
 
 const RELATIVE_BUILD_DIR_PATH = '../build';
 

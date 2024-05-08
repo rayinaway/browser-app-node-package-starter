@@ -1,9 +1,7 @@
 import '@total-typescript/ts-reset';
 import * as React from 'react';
 import * as ReactDomClient from 'react-dom/client';
-
 import Root from '~~/layout/components/root';
-
 import './base.css';
 import services from './services';
 
